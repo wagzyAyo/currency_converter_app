@@ -1,12 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Convert from './src/components/screens/convert';
+import About from './src/components/screens/about'
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Tabs = createBottomTabNavigator()
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer >
+      <Tabs.Navigator>
+        <Tabs.Screen  name='Convert currency' component={Convert}/>
+        <Tabs.Screen name='About' component={About} />
+    </Tabs.Navigator>
+    </NavigationContainer>
   );
 }
 
