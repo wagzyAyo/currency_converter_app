@@ -1,7 +1,10 @@
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'; 
 import Tab from './src/components/tab';
+
+
 
 
 const Tabs = createBottomTabNavigator()
