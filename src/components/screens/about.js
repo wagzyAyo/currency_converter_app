@@ -16,7 +16,7 @@ const About = () => {
 
 const styles = StyleSheet.create({
     container:{
-        flex: 1,
+        flex: 0,
         paddingTop: StatusBar.currentHeight || 0,
         padding: 20,
     },
