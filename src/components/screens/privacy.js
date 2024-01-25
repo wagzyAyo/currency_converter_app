@@ -16,8 +16,8 @@ const Privacy = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 0,
-        marginTop: StatusBar.currentHeight || 0,
+        flex: 1,
+        paddingTop: StatusBar.currentHeight || 0,
         padding: 20,
     },
     img:{

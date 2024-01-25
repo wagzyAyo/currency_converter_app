@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import {Text, View, StyleSheet } from 'react-native';
-import { Form } from '../form'
 
 
 const API_KEY = process.env.KEY
