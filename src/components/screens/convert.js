@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Text, View, StyleSheet } from 'react-native';
-
+import { Form } from '../form'
 
 
 const API_KEY = process.env.KEY
@@ -22,7 +22,8 @@ const Convert = () => {
     }, [])
     return(
         <View>
-            {loading ? (<Text>Loading...</Text>): (<Text> {data.base ? 'Success!' :  'Fail!'}  </Text>)}    
+            {loading ? (<Text>Loading...</Text>): (<Text> {data.base ? 'Success!' :  'Fail!'}  </Text>)}
+             
         </View>
     )
 }
