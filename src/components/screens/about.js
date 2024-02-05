@@ -1,35 +1,12 @@
 import React from "react";
-import {Text, View, StyleSheet, SafeAreaView, StatusBar, Image} from 'react-native'
+import Bp from "../bp";
+import aboutImage from '../../../assets/unsplash_TamMbr4okv4.png'
 
 const About = () => {
+    const text ="We believe that financial transactions should be as borderless as the modern world we live in. Whether you're a frequent traveler"
     return(
-        <SafeAreaView>
-        <View style={styles.container}>
-            <Image style={styles.img} source={require('../../../assets/unsplash_TamMbr4okv4.png')}/>
-            <Text style={styles.textwrapper}>We believe that financial transactions should
-            be as borderless as the modern world we live 
-            in. Whether you're a frequent traveler</Text>
-        </View>
-        </SafeAreaView>
+        <Bp ImageSource={aboutImage} text={text}/>
     )
 }
-
-const styles = StyleSheet.create({
-    container:{
-        flex: 0,
-        paddingTop: StatusBar.currentHeight || 0,
-        padding: 20,
-    },
-    img: {
-        width:370,
-        height:370,
-    },
-    textwrapper: {
-        textAlign: 'center',
-        marginTop: 20,
-    },
-   
-})
-
 
 export default About
