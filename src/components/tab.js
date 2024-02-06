@@ -4,7 +4,7 @@ import Privacy from './screens/privacy';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome, MaterialIcons } from '@expo/vector-icons'
 /*
-ABout component
+Tab navigation components
 */
 
 const Tabs = createBottomTabNavigator()

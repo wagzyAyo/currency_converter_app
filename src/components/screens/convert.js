@@ -108,8 +108,10 @@ const Convert = () => {
       alignItems: 'center',
     },
     form: {
-      width: '80%',
+      width: '90%',
       marginTop: 20,
+      backgroundColor: 'grey',
+      borderRadius: 20,
     },
     button: {
       backgroundColor: 'blue',
