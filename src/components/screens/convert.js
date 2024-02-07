@@ -11,8 +11,6 @@ const currencyList = ['USD', 'EUR', 'GBP', 'JPY']
 
 
 const Convert = () => {
-    const [data, setData] = useState([])
-    const [loading, setLoading] = useState(true)
     const [formData, setFormData] = useState({
         convertFrom: '',
         amount: '',
@@ -43,9 +41,9 @@ const Convert = () => {
     
       const unitPer = async () => {
         try {
-          const { convertFrom, amount, convertTo, convertedAmount } = formData;
+          const { convertFrom, convertTo } = formData;
           const exchangeRate = await getExchangeRate(convertFrom, convertTo);
-          const unitValue = (1 / exchangeRate).toFixed(4);
+          const unitValue = exchangeRate.toFixed(4);
           const unitText = `1 ${convertFrom} = ${unitValue} ${convertTo}`;
           setUnit(unitText);
         } catch (error) {
@@ -79,7 +77,7 @@ const Convert = () => {
           <TextInput
             keyboardType="numeric"
             value={formData.amount}
-            style={styles.picker}
+            style={[styles.picker, styles.text]}
             onChangeText={(value) => setFormData({ ...formData, amount: value })}
           />
           </View>
@@ -101,9 +99,10 @@ const Convert = () => {
             ))}
           </Picker>
             <TextInput 
-            selectedValue={formData.convertedAmount}
-            placeholder='Converted Amount'
-            style={styles.picker}
+            value={formData.convertedAmount}
+            placeholder='0.00'
+            style={[styles.picker, styles.text]}
+            editable={false}
             />
             </View>
           
@@ -146,6 +145,9 @@ const Convert = () => {
     unit: {
       marginTop: 20,
       textAlign: 'center'
+    },
+    text: {
+      padding:10,
     }
   });
 
