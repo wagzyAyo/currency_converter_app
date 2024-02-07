@@ -63,6 +63,10 @@ const Convert = () => {
         <Text>Convert Currency</Text>
         <View style={styles.form}>
           <View style={styles.layout}>
+          <Text >Select</Text>
+          <Text >Amount</Text>
+          </View>
+          <View style={styles.layout}>
           <Picker
             selectedValue={formData.convertFrom}
             style={styles.picker}
@@ -73,13 +77,20 @@ const Convert = () => {
             ))}
           </Picker>
           <TextInput
-            placeholder="Amount"
             keyboardType="numeric"
             value={formData.amount}
             style={styles.picker}
             onChangeText={(value) => setFormData({ ...formData, amount: value })}
           />
           </View>
+          <TouchableOpacity style={styles.button} onPress={handleConvert}>
+            <Text>Convert</Text>
+          </TouchableOpacity>
+          <View style={styles.layout}>
+            <Text>Convert to</Text>
+            <Text>Converted Amount</Text>
+          </View>
+          <View style={styles.layout}>
           <Picker
             selectedValue={formData.convertTo}
             style={styles.picker}
@@ -89,18 +100,15 @@ const Convert = () => {
               <Picker.Item key={currency} label={currency} value={currency} />
             ))}
           </Picker>
-          <TouchableOpacity style={styles.button} onPress={handleConvert}>
-            <Text>Convert</Text>
-          </TouchableOpacity>
-            <Text>Converted Amount</Text>
             <TextInput 
             selectedValue={formData.convertedAmount}
             placeholder='Converted Amount'
-            keyboardType= 'false'
             style={styles.picker}
             />
-          <Text>Unit: {unit}</Text>
+            </View>
+          
         </View>
+        <Text style={styles.unit}>Unit: {unit}</Text>
       </View>
     );
   };
@@ -125,7 +133,7 @@ const Convert = () => {
     },
     picker: {
       height: 50,
-      width:50,
+      width:120,
       backgroundColor: '#D9D9D9'
     },
     button: {
@@ -135,6 +143,10 @@ const Convert = () => {
       borderRadius: 5,
       marginTop: 10,
     },
+    unit: {
+      marginTop: 20,
+      textAlign: 'center'
+    }
   });
 
 export default Convert
