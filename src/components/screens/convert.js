@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {Text, View, StyleSheet, TouchableOpacity, TextInput, Image } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { currencyList } from '../currencies'
@@ -57,7 +57,8 @@ const Convert = () => {
 
     return(
         <View style={styles.container}>
-        <Text>Convert Currency</Text>
+        <Text style={styles.bigFont}>Convert Currency</Text>
+        <Text style={styles.smallFont}>Check live rate</Text>
         <View style={styles.form}>
           <View style={styles.layout}>
           <Text >Select</Text>
@@ -130,13 +131,21 @@ const Convert = () => {
       justifyContent: 'space-between',
       padding: 30
     },
+    bigFont: {
+      fontSize: 24,
+      fontWeight: 'bold'
+    },
+    smallFont: {
+      color: '#A9A7A7',
+      fontSize: 16,
+    },
     picker: {
       height: 50,
       width:120,
       backgroundColor: '#D9D9D9'
     },
     button: {
-      backgroundColor: 'blue',
+      backgroundColor: '#0840AC',
       width:36,
       height:36,
       padding: 10,
