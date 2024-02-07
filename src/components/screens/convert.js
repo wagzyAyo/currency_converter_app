@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import {Text, View, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity, TextInput, Image } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-
 
 const API_KEY = process.env.KEY
 
@@ -43,7 +42,7 @@ const Convert = () => {
         try {
           const { convertFrom, convertTo } = formData;
           const exchangeRate = await getExchangeRate(convertFrom, convertTo);
-          const unitValue = exchangeRate.toFixed(4);
+          const unitValue = exchangeRate.toFixed(2);
           const unitText = `1 ${convertFrom} = ${unitValue} ${convertTo}`;
           setUnit(unitText);
         } catch (error) {
@@ -81,8 +80,9 @@ const Convert = () => {
             onChangeText={(value) => setFormData({ ...formData, amount: value })}
           />
           </View>
+          <View style={styles.horizontalLine}></View>
           <TouchableOpacity style={styles.button} onPress={handleConvert}>
-            <Text>Convert</Text>
+            <Image source={require("../../../assets/exchange icon.png")} style={styles.img} />
           </TouchableOpacity>
           <View style={styles.layout}>
             <Text>Convert to</Text>
@@ -137,10 +137,15 @@ const Convert = () => {
     },
     button: {
       backgroundColor: 'blue',
+      width:36,
+      height:36,
       padding: 10,
       alignItems: 'center',
-      borderRadius: 5,
-      marginTop: 10,
+      borderRadius: 50,
+      margin: "auto",
+      marginTop: -16,
+      display: 'flex',
+      alignSelf: 'center'
     },
     unit: {
       marginTop: 20,
@@ -148,6 +153,14 @@ const Convert = () => {
     },
     text: {
       padding:10,
+    },
+    img: {
+      width:15,
+      height:17
+    },
+    horizontalLine: {
+      height: 1,
+      backgroundColor: "black",
     }
   });
 
