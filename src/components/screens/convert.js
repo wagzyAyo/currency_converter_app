@@ -22,13 +22,6 @@ const Convert = () => {
 
     const [unit, setUnit] = useState('');
 
-    /*useEffect(() => {
-      fetch(url)
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((err) => console.log(err))
-      .finally(()=> setLoading(false))
-    }, []) */
 
     const getExchangeRate = async (fromCurrency, toCurrency) => {
         // Simulating API call
@@ -69,8 +62,10 @@ const Convert = () => {
         <View style={styles.container}>
         <Text>Convert Currency</Text>
         <View style={styles.form}>
+          <View style={styles.layout}>
           <Picker
             selectedValue={formData.convertFrom}
+            style={styles.picker}
             onValueChange={(value) => setFormData({ ...formData, convertFrom: value })}
           >
             {currencyList.map((currency) => (
@@ -81,10 +76,13 @@ const Convert = () => {
             placeholder="Amount"
             keyboardType="numeric"
             value={formData.amount}
+            style={styles.picker}
             onChangeText={(value) => setFormData({ ...formData, amount: value })}
           />
+          </View>
           <Picker
             selectedValue={formData.convertTo}
+            style={styles.picker}
             onValueChange={(value) => setFormData({ ...formData, convertTo: value })}
           >
             {currencyList.map((currency) => (
@@ -94,7 +92,13 @@ const Convert = () => {
           <TouchableOpacity style={styles.button} onPress={handleConvert}>
             <Text>Convert</Text>
           </TouchableOpacity>
-          <Text>Converted Amount: {formData.convertedAmount}</Text>
+            <Text>Converted Amount</Text>
+            <TextInput 
+            selectedValue={formData.convertedAmount}
+            placeholder='Converted Amount'
+            keyboardType= 'false'
+            style={styles.picker}
+            />
           <Text>Unit: {unit}</Text>
         </View>
       </View>
@@ -110,8 +114,19 @@ const Convert = () => {
     form: {
       width: '90%',
       marginTop: 20,
-      backgroundColor: 'grey',
+      backgroundColor: '#ffffff',
       borderRadius: 20,
+    },
+    layout: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      padding: 30
+    },
+    picker: {
+      height: 50,
+      width:50,
+      backgroundColor: '#D9D9D9'
     },
     button: {
       backgroundColor: 'blue',
