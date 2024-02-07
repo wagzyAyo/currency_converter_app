@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import {Text, View, StyleSheet, TouchableOpacity, TextInput, Image } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
+import { currencyList } from '../currencies'
 
 const API_KEY = process.env.KEY
 
 const url = `http://data.fixer.io/api/latest?access_key=${API_KEY}`
-const currencyList = ['USD', 'EUR', 'GBP', 'JPY']
 
 
 
@@ -69,8 +69,8 @@ const Convert = () => {
             style={styles.picker}
             onValueChange={(value) => setFormData({ ...formData, convertFrom: value })}
           >
-            {currencyList.map((currency) => (
-              <Picker.Item key={currency} label={currency} value={currency} />
+            {currencyList.map((currency, index) => (
+              <Picker.Item key={index} label={currency} value={currency} />
             ))}
           </Picker>
           <TextInput
@@ -94,8 +94,8 @@ const Convert = () => {
             style={styles.picker}
             onValueChange={(value) => setFormData({ ...formData, convertTo: value })}
           >
-            {currencyList.map((currency) => (
-              <Picker.Item key={currency} label={currency} value={currency} />
+            {currencyList.map((currency, index) => (
+              <Picker.Item key={index} label={currency} value={currency} />
             ))}
           </Picker>
             <TextInput 
