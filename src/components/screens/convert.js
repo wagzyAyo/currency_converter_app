@@ -61,8 +61,8 @@ const Convert = () => {
         <Text style={styles.smallFont}>Check live rate</Text>
         <View style={styles.form}>
           <View style={styles.layout}>
-          <Text >Select</Text>
-          <Text >Amount</Text>
+          <Text style={styles.smallFont}>Select</Text>
+          <Text style={styles.smallFont}>Amount</Text>
           </View>
           <View style={styles.layout}>
           <Picker
@@ -86,8 +86,8 @@ const Convert = () => {
             <Image source={require("../../../assets/exchange icon.png")} style={styles.img} />
           </TouchableOpacity>
           <View style={styles.layout}>
-            <Text>Convert to</Text>
-            <Text>Converted Amount</Text>
+            <Text style={styles.smallFont}>Convert to</Text>
+            <Text style={styles.smallFont}>Converted Amount</Text>
           </View>
           <View style={styles.layout}>
           <Picker
@@ -146,13 +146,13 @@ const Convert = () => {
     },
     button: {
       backgroundColor: '#0840AC',
-      width:36,
-      height:36,
+      width:40,
+      height:40,
       padding: 10,
       alignItems: 'center',
       borderRadius: 50,
       margin: "auto",
-      marginTop: -16,
+      marginTop: -18,
       display: 'flex',
       alignSelf: 'center'
     },
