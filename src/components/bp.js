@@ -22,6 +22,10 @@ const styles = StyleSheet.create({
         width: 370,
         height: 370,
     },
+    title: {
+        fontWeight: "bold",
+        fontSize: 24,
+    },
     textwrapper: {
         textAlign: 'center',
         marginTop: 20,
