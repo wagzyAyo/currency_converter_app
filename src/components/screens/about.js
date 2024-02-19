@@ -1,11 +1,11 @@
 import React from "react";
 import Bp from "../bp";
-import aboutImage from '../../../assets/unsplash_TamMbr4okv4.png'
 
 const About = () => {
     const text ="We believe that financial transactions should be as borderless as the modern world we live in. Whether you're a frequent traveler"
+    const image_url = "http://currencyconverter.com.ng/static/images/unsplash_TamMbr4okv4.png"
     return(
-        <Bp ImageSource={aboutImage} text={text}/>
+        <Bp ImageSource={{uri: image_url}} text={text}/>
     )
 }
 
