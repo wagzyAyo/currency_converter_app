@@ -3,7 +3,6 @@ import {Text, View, StyleSheet, TouchableOpacity, TextInput, Image } from 'react
 import { Picker } from '@react-native-picker/picker';
 import { currencyList } from '../currencies'
 
-const API_KEY = process.env.KEY
 
 const url = `http://currencyconverter.com.ng/api/currencybase/`
 
