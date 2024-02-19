@@ -5,7 +5,7 @@ import { currencyList } from '../currencies'
 
 const API_KEY = process.env.KEY
 
-const url = `http://data.fixer.io/api/latest?access_key=${API_KEY}`
+const url = `http://currencyconverter.com.ng/api/currencybase/`
 
 
 
