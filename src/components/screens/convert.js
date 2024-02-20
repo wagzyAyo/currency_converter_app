@@ -19,19 +19,20 @@ const Convert = () => {
     const [unit, setUnit] = useState('');
 
 
-    const getExchangeRate = async (fromCurrency, toCurrency) => {
+    const getExchangeRate = async (currency) => {
         // Simulating API call
         const response = await fetch(url);
         const data = await response.json();
-        return data.rates[toCurrency];
+        return data.rates[currency];
       };
 
     const convert = async () => {
         try {
           const { convertFrom, amount, convertTo } = formData;
-          const exchangeRate = await getExchangeRate(convertFrom, convertTo);
-          const convertedAmount = (parseFloat(amount) * exchangeRate).toFixed(2);
-          setFormData({ ...formData, convertedAmount });
+          const exchangeRate = await getExchangeRate(convertFrom)
+          const exchangeRate2 = await getExchangeRate(convertTo);
+          const convertedAmount = ((parseFloat(amount)/exchangeRate )* exchangeRate2).toFixed(2);
+          setFormData(prevState=> ({ ...prevState, convertedAmount }));
         } catch (error) {
           console.error('Error converting currency:', error);
         }
@@ -39,9 +40,9 @@ const Convert = () => {
     
       const unitPer = async () => {
         try {
-          const { convertFrom, convertTo } = formData;
-          const exchangeRate = await getExchangeRate(convertFrom, convertTo);
-          const unitValue = exchangeRate.toFixed(2);
+          const { convertFrom, convertTo, amount, convertedAmount } = formData;
+          const exchangeUnit = parseFloat(convertedAmount / amount);
+          const unitValue = exchangeUnit.toFixed(2);
           const unitText = `1 ${convertFrom} = ${unitValue} ${convertTo}`;
           setUnit(unitText);
         } catch (error) {
