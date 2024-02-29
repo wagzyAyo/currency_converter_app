@@ -27,6 +27,10 @@ https://docs.python.org/3/library/unittest.html
 
 https://github.com/wagzyAyo/currency_converter_app
 
+# Link to the website
+
+http://currencyconverter.com.ng
+
 # Installation
 
 ``` bash 
@@ -47,6 +51,6 @@ In the cloned repo check the required dependencies in package.json and install i
 npx expo start
 ```
 
-# Running your React Native application
+# Running React Native application
 
 Install the Expo Go app on your iOS or Android phone and connect to the same wireless network as your computer. On Android, use the Expo Go app to scan the QR code from your terminal to open your project. On iOS, use the built-in QR code scanner of the default iOS Camera app.
