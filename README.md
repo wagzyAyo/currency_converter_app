@@ -13,23 +13,6 @@ Welcome to the Currency Converter App repository! This project aims to provide u
  Provide developers with access to currency conversion data through our API, allowing them to integrate real-time exchange rates into their applications and services 
  seamlessly.
 
-# Helpful Resources:
-
-https://flask.palletsprojects.com/en/3.0.x/<br>
-https://reactnative.dev/docs/getting-started<br>
-https://github.com/facebook/react-native<br>
-https://www.mongodb.com/languages/python<br>
-https://www.mongodb.com/compatibility/setting-up-flask-with-mongodb<br>
-https://docs.python.org/3/library/unittest.html
-
-
-# Currency converter mobile App repo
-
-https://github.com/wagzyAyo/currency_converter_app
-
-# Link to the website
-
-http://currencyconverter.com.ng
 
 # Installation
 
@@ -54,3 +37,22 @@ npx expo start
 # Running React Native application
 
 Install the Expo Go app on your iOS or Android phone and connect to the same wireless network as your computer. On Android, use the Expo Go app to scan the QR code from your terminal to open your project. On iOS, use the built-in QR code scanner of the default iOS Camera app.
+
+# Helpful Resources:
+
+https://flask.palletsprojects.com/en/3.0.x/<br>
+https://reactnative.dev/docs/getting-started<br>
+https://github.com/facebook/react-native<br>
+https://www.mongodb.com/languages/python<br>
+https://www.mongodb.com/compatibility/setting-up-flask-with-mongodb<br>
+https://docs.python.org/3/library/unittest.html
+
+
+# Currency converter mobile App repo
+
+https://github.com/wagzyAyo/currency_converter_app
+
+
+# Link to the website app
+
+http://currencyconverter.com.ng
