@@ -48,9 +48,9 @@ https://www.mongodb.com/compatibility/setting-up-flask-with-mongodb<br>
 https://docs.python.org/3/library/unittest.html
 
 
-# Currency converter mobile App repo
+# Currency converter website App repo
 
-https://github.com/wagzyAyo/currency_converter_app
+https://github.com/wagzyAyo/Currency-converter
 
 
 # Link to the website app
