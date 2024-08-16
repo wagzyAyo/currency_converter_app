@@ -4,7 +4,8 @@ import { Picker } from '@react-native-picker/picker';
 import { currencyList } from '../currencies'
 
 
-const url = `http://currencyconverter.com.ng/api/currencybase/`
+const url = `https://currency-converter-rgw7.onrender.com/api/currencybase/`
+console.log(url)
 
 
 
