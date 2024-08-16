@@ -5,7 +5,6 @@ import { currencyList } from '../currencies'
 
 
 const url = `https://currency-converter-rgw7.onrender.com/api/currencybase/`
-console.log(url)
 
 
 
@@ -24,6 +23,7 @@ const Convert = () => {
         // Simulating API call
         const response = await fetch(url);
         const data = await response.json();
+        console.log(data)
         return data.rates[currency];
       };
 
@@ -41,6 +41,7 @@ const Convert = () => {
     
       const unitPer = async () => {
         try {
+          await convert()
           const { convertFrom, convertTo, amount, convertedAmount } = formData;
           const exchangeUnit = parseFloat(convertedAmount / amount);
           const unitValue = exchangeUnit.toFixed(2);

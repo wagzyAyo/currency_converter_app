@@ -3,13 +3,13 @@ Welcome to the Currency Converter App repository! This project aims to provide u
 
 <b> Features:</b>
 <br>
- Real-time Exchange Rates: 
+ **Real-time Exchange Rates**: 
  Stay updated with the latest exchange rates from around the world, ensuring accurate and reliable currency conversions.
 
- Intuitive Interface: 
+ **Intuitive Interface**: 
  Experience a sleek and intuitive user interface designed for effortless navigation and enhanced usability across devices.
 
- API for Developers: 
+ **API for Developers**: 
  Provide developers with access to currency conversion data through our API, allowing them to integrate real-time exchange rates into their applications and services 
  seamlessly.
 
@@ -26,7 +26,12 @@ npx create-expo-app AwesomeProject
 https://github.com/wagzyAyo/currency_converter_app.git
 ```
 Copy the .expo and node_modules files from AwesomeProject to the cloned repo.
-In the cloned repo check the required dependencies in package.json and install if the next step gives an error.
+In the cloned repo check the required dependencies in package.json and 
+run 
+``` bash
+npm install
+```
+ to install if the next step gives an error.
 
 #  Run
 
@@ -55,4 +60,4 @@ https://github.com/wagzyAyo/Currency-converter
 
 # Link to the website app
 
-http://currencyconverter.com.ng
+[http://currencyconverter.com.ng](https://currency-converter-rgw7.onrender.com/)
