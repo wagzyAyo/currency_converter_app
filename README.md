@@ -60,4 +60,4 @@ https://github.com/wagzyAyo/Currency-converter
 
 # Link to the website app
 
-[http://currencyconverter.com.ng](https://currency-converter-rgw7.onrender.com/)
+[currencyconverter](https://currency-converter-rgw7.onrender.com/)
